@@ -61,7 +61,7 @@ func main() {
 	}
 	defer file.Close()
 
-	_, err = file.WriteString(fmt.Sprintf("Dólar: {%s}", data))
+	_, err = file.WriteString(fmt.Sprintf("Dólar: %s", data))
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Erro ao escrever no arquivo: %v\n", err)
 	}
